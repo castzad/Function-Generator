@@ -1,0 +1,26 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 0 0 160 160
+TEXT 24 56 Left 1 LT1054
+TEXT 24 88 Left 1 (avg model)
+WINDOW 0 0 -16 Left 2
+WINDOW 3 0 176 Left 2
+SYMATTR Prefix X
+SYMATTR Value FG_LT1054
+SYMATTR SpiceModel FG_LT1054
+SYMATTR Description LT1054 - behavioural model in fg_models.lib
+PIN 0 32 LEFT 8
+PINATTR PinName VIN
+PINATTR SpiceOrder 1
+PIN 80 160 BOTTOM 8
+PINATTR PinName GND
+PINATTR SpiceOrder 2
+PIN 0 96 LEFT 8
+PINATTR PinName CAP+
+PINATTR SpiceOrder 3
+PIN 0 128 LEFT 8
+PINATTR PinName CAP-
+PINATTR SpiceOrder 4
+PIN 160 64 RIGHT 8
+PINATTR PinName VOUT
+PINATTR SpiceOrder 5

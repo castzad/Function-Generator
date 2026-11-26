@@ -1,0 +1,148 @@
+* fg_models.lib -- models for the BEE 425 function generator LTspice files
+* Every schematic in this folder loads this file with ".lib fg_models.lib".
+* Keep it in the same folder as the .asc and .asy files.
+*
+* These are BEHAVIOURAL models written from datasheet headline numbers.
+* They are good for expected DC levels, gains, filter response and
+* waveform shape. They are NOT vendor models: no op-amp current limit,
+* no DAC glitch energy, no LT1054 switching ripple.
+* To swap in vendor models: ADI publishes an AD8066 model, TI an OPA1612
+* model, and LTspice's own library may already contain LT1054.
+*
+* Written to run in both LTspice and ngspice.
+
+*---------------------------------------------------------------------
+* Op-amps. Pin order = LTspice opamp2 symbol: In+ In- V+ V- OUT
+* Single-pole gain (GBW), slew-rate limit, output swing limited to
+* 1 V inside each rail (assumption; the real parts swing closer).
+* Load current is drawn from ground, not from the rails.
+*---------------------------------------------------------------------
+.subckt FG_AD8066 inp inn vp vn out
+* AD8066: GBW 145 MHz, slew 180 V/us, Avol ~113 dB, Iq 6.4 mA per amp
+* Cc = 1 pF -> Imax = SR*Cc = 180 uA, gm = 2*pi*GBW*Cc = 9.11e-4 S
+Rin inp inn 1T
+B1 0 int I=180u*tanh(9.11e-4*V(inp,inn)/180u)
+Cc int 0 1p
+Ro int 0 4.94e8
+Dhi int vp FG_DCLAMP
+Dlo vn int FG_DCLAMP
+B2 o1 0 V=min(max(V(int),V(vn)+1),V(vp)-1)
+Rout o1 out 2
+Iq vp vn 6.4m
+.ends FG_AD8066
+
+.subckt FG_OPA1612 inp inn vp vn out
+* OPA1612: GBW 40 MHz, slew 27 V/us, Avol ~130 dB, Iq 3.6 mA per amp
+* Real part limits output current to about +55/-62 mA (not modelled).
+* Cc = 1 pF -> Imax = 27 uA, gm = 2*pi*40e6*1e-12 = 2.51e-4 S
+Rin inp inn 1T
+B1 0 int I=27u*tanh(2.51e-4*V(inp,inn)/27u)
+Cc int 0 1p
+Ro int 0 1.26e10
+Dhi int vp FG_DCLAMP
+Dlo vn int FG_DCLAMP
+B2 o1 0 V=min(max(V(int),V(vn)+1),V(vp)-1)
+Rout o1 out 1
+Iq vp vn 3.6m
+.ends FG_OPA1612
+
+.model FG_DCLAMP D(Is=1e-14 N=1)
+
+*---------------------------------------------------------------------
+* DAC7821 (12-bit multiplying DAC), behavioural.
+* Pins: VREF IOUT1 IOUT2 RFB CODE
+* CODE is the 12-bit input code as a voltage (0 V .. 4095 V), standing
+* in for the 12 data lines D0..D11 latched on each CS rising edge.
+* Ladder resistance R = 10 k (typ); RFB = R.
+* Current into IOUT1 = VREF * code / 4096 / R  (into IOUT2: the rest).
+* With VREF = -2.5 V and an op-amp holding IOUT1 at 0 V,
+* the op-amp output (RFB pin) = +2.5 V * code / 4096.
+* Output capacitance: 30 pF assumed -- check the DAC7821 datasheet.
+*---------------------------------------------------------------------
+.subckt FG_DAC7821 vref iout1 iout2 rfb code
+Rladder vref 0 10k
+Rfb rfb iout1 10k
+B1 0 iout1 I=V(vref)*min(max(V(code),0),4095)/4096/10k
+B2 0 iout2 I=V(vref)*(4095-min(max(V(code),0),4095))/4096/10k
+Cout1 iout1 0 30p
+Cout2 iout2 0 30p
+.ends FG_DAC7821
+
+*---------------------------------------------------------------------
+* ADG719 SPDT switch. Pins: IN VDD GND S1 D S2
+* IN low  -> D connected to S1 (FILT_OUT on this board)
+* IN high -> D connected to S2 (DAC_OUT, filter bypass for square)
+* Ron 4 ohm (VDD = 5 V figure). Logic threshold ~1.6 V (datasheet:
+* high >= 2.4 V, low <= 0.8 V). Clamp diodes to VDD and GND show
+* what happens if a signal goes past the supply.
+*---------------------------------------------------------------------
+.subckt FG_ADG719 in vdd gnd s1 d s2
+Sa s1 d gnd in FG_SWLOW
+Sb s2 d in gnd FG_SWHIGH
+D1 s1 vdd FG_DESD
+D2 gnd s1 FG_DESD
+D3 s2 vdd FG_DESD
+D4 gnd s2 FG_DESD
+D5 d vdd FG_DESD
+D6 gnd d FG_DESD
+Rleak vdd gnd 10Meg
+.ends FG_ADG719
+.model FG_SWHIGH SW(Ron=4 Roff=1G Vt=1.6 Vh=0.2)
+.model FG_SWLOW SW(Ron=4 Roff=1G Vt=-1.6 Vh=0.2)
+.model FG_DESD D(Is=1e-14 N=1)
+
+*---------------------------------------------------------------------
+* REF3025 2.5 V reference. Pins: IN GND OUT
+*---------------------------------------------------------------------
+.subckt FG_REF3025 in gnd out
+B1 o1 gnd V=min(2.5,max(V(in,gnd)-0.05,0))
+Rout o1 out 0.1
+Rq in gnd 100k
+.ends FG_REF3025
+
+*---------------------------------------------------------------------
+* R-78E5.0-0.5 switching regulator, average (DC) stand-in.
+* Pins: VIN GND VOUT. 5 V out, ~1.5 V dropout, efficiency 85 % assumed.
+* Input current = Pout / (Vin * efficiency) + 2 mA no-load.
+*---------------------------------------------------------------------
+.subckt FG_R78E in gnd out
+B1 o1 gnd V=min(5,max(V(in,gnd)-1.5,0))
+Vsense o1 out 0
+B2 in gnd I=5*max(I(Vsense),0)/max(V(in,gnd),1)/0.85+2m
+.ends FG_R78E
+
+*---------------------------------------------------------------------
+* LT1054 voltage inverter, average (DC) stand-in.
+* Pins: VIN GND CAP+ CAP- VOUT
+* VOUT = -VIN through an output resistance of 10 ohm (assumed from the
+* datasheet's output-resistance spec -- adjust if your datasheet says
+* otherwise). Input current = output current + 2.5 mA quiescent.
+* The real part switches at ~25 kHz and puts ripple on VOUT; this model
+* does not. CAP+/CAP- only connect to C6 on the board.
+*---------------------------------------------------------------------
+.subckt FG_LT1054 in gnd capp capm out
+B1 vint gnd V=-V(in,gnd)
+Vsense vint vx 0
+Rout vx out 10
+B2 in gnd I=max(-I(Vsense),0)+2.5m
+Rc1 capp gnd 1G
+Rc2 capm gnd 1G
+.ends FG_LT1054
+
+*---------------------------------------------------------------------
+* Q1 start-up switch (MMBT2222A = SOT-23 2N2222). Pins: C B E
+*---------------------------------------------------------------------
+.subckt FG_MMBT2222A c b e
+Q1 c b e FG_Q2222
+.ends FG_MMBT2222A
+.model FG_Q2222 NPN(Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307 Ise=14.34f Ikf=0.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1 Cjc=7.306p Mjc=0.3416 Vjc=0.75 Fc=0.5 Cje=22.01p Mje=0.377 Vje=0.75 Tr=46.91n Tf=411.1p Itf=0.6 Vtf=1.7 Xtf=3 Rb=10)
+
+*---------------------------------------------------------------------
+* Diodes (fitted to datasheet forward-voltage points; approximate)
+* SS14: ~0.35 V at 150 mA, ~0.45 V at 1 A
+* BAT54T1G: ~0.24 V at 0.1 mA, ~0.32 V at 1 mA, ~0.40 V at 10 mA
+*---------------------------------------------------------------------
+.model SS14 D(Is=8e-7 N=1.1 Rs=0.05 Cjo=110p BV=40 Ibv=1m)
+.model BAT54T1G D(Is=1e-7 N=1.34 Rs=2 Cjo=10p BV=30 Ibv=10u)
+* LTST-C171KRKT red LED: ~1.9 V at 2-3 mA (approximate)
+.model LED_RED D(Is=2.2e-19 N=2 Rs=10 Cjo=20p BV=5 Ibv=10u)

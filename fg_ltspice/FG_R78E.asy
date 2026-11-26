@@ -1,0 +1,20 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 0 0 128 96
+TEXT 24 24 Left 1 R-78E5.0
+TEXT 24 56 Left 1 (avg model)
+WINDOW 0 0 -16 Left 2
+WINDOW 3 0 112 Left 2
+SYMATTR Prefix X
+SYMATTR Value FG_R78E
+SYMATTR SpiceModel FG_R78E
+SYMATTR Description R-78E5.0 - behavioural model in fg_models.lib
+PIN 0 48 LEFT 8
+PINATTR PinName VIN
+PINATTR SpiceOrder 1
+PIN 64 96 BOTTOM 8
+PINATTR PinName GND
+PINATTR SpiceOrder 2
+PIN 128 48 RIGHT 8
+PINATTR PinName VOUT
+PINATTR SpiceOrder 3

@@ -1,0 +1,19 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 0 0 96 96
+TEXT 24 40 Left 1 NPN
+WINDOW 0 0 -16 Left 2
+WINDOW 3 0 112 Left 2
+SYMATTR Prefix X
+SYMATTR Value FG_MMBT2222A
+SYMATTR SpiceModel FG_MMBT2222A
+SYMATTR Description NPN - behavioural model in fg_models.lib
+PIN 96 16 RIGHT 8
+PINATTR PinName C
+PINATTR SpiceOrder 1
+PIN 0 48 LEFT 8
+PINATTR PinName B
+PINATTR SpiceOrder 2
+PIN 96 80 RIGHT 8
+PINATTR PinName E
+PINATTR SpiceOrder 3
