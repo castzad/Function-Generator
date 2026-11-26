@@ -1,0 +1,1308 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "8aa17dac-ce51-4ef4-b862-1ca351b4cd89")
+	(paper "A4")
+	(title_block
+		(title "BEE-425 Function Generator")
+		(rev "A")
+		(company "Zad Castañeda")
+		(comment 1 "BEE-425")
+	)
+	(lib_symbols
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 24.13 88.9) (xy 144.78 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01448e54-0a5d-49a2-b268-8656a8383cb6")
+	)
+	(wire
+		(pts
+			(xy 24.13 129.54) (xy 248.92 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cfc037b-cdb6-4d61-8b31-1941706de388")
+	)
+	(wire
+		(pts
+			(xy 24.13 63.5) (xy 93.98 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16c10dd5-ce99-40cc-8386-4f8d6f8e2032")
+	)
+	(wire
+		(pts
+			(xy 24.13 114.3) (xy 222.25 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "209be857-20e1-4431-8f69-0347dddb1c73")
+	)
+	(wire
+		(pts
+			(xy 24.13 101.6) (xy 165.1 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37addabf-5228-4609-af73-16dcdc2955cd")
+	)
+	(wire
+		(pts
+			(xy 248.92 116.84) (xy 274.32 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f649e95-71d1-43c7-83d7-5426f6d56923")
+	)
+	(wire
+		(pts
+			(xy 177.8 97.79) (xy 177.8 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d74ae34-a7d4-4b04-9f66-2933e18cff47")
+	)
+	(wire
+		(pts
+			(xy 114.3 73.66) (xy 114.3 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "508d8210-991b-461d-99b9-fdf3973a7d46")
+	)
+	(wire
+		(pts
+			(xy 134.62 83.82) (xy 134.62 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "560472a1-dc86-48b0-8134-3cadd9230b40")
+	)
+	(wire
+		(pts
+			(xy 201.93 22.86) (xy 201.93 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "596b403e-8a52-4321-8c24-7e096a4b46f0")
+	)
+	(wire
+		(pts
+			(xy 55.88 22.86) (xy 55.88 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b5599ec-2296-46ac-bca6-3a58048e2f23")
+	)
+	(wire
+		(pts
+			(xy 24.13 95.25) (xy 154.94 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e9ee8b0-db48-4189-9475-4bcad1d21f41")
+	)
+	(wire
+		(pts
+			(xy 73.66 22.86) (xy 73.66 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "726ca0ec-6eef-4418-bfc7-dcffce534a48")
+	)
+	(wire
+		(pts
+			(xy 24.13 73.66) (xy 114.3 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "824cee20-0e32-4e66-a4b9-c0b12258ee5a")
+	)
+	(wire
+		(pts
+			(xy 24.13 44.45) (xy 62.23 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "833738ea-75e8-4922-9d1c-29be496943f5")
+	)
+	(wire
+		(pts
+			(xy 222.25 125.73) (xy 274.32 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c1b1a2e-bb5e-4980-b71e-9d4e5b5a613b")
+	)
+	(wire
+		(pts
+			(xy 24.13 78.74) (xy 124.46 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a29a516d-a9c2-4308-8b2f-7b80955f938e")
+	)
+	(wire
+		(pts
+			(xy 24.13 83.82) (xy 134.62 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1ed84b7-cec9-4dd3-9ec2-0bfa7ff5f90a")
+	)
+	(wire
+		(pts
+			(xy 24.13 50.8) (xy 73.66 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b39591eb-0918-4fe4-b4dd-818661cebf47")
+	)
+	(wire
+		(pts
+			(xy 83.82 57.15) (xy 24.13 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba4e8d7b-7ede-453f-8d34-a02ea550e71b")
+	)
+	(wire
+		(pts
+			(xy 165.1 101.6) (xy 165.1 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c002bce0-1d7a-46d5-bb18-9185d56f02d7")
+	)
+	(wire
+		(pts
+			(xy 24.13 68.58) (xy 104.14 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1641453-1f9b-493d-9f2f-b63bb3960955")
+	)
+	(wire
+		(pts
+			(xy 104.14 68.58) (xy 104.14 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c49a25b1-8d05-49eb-bbaf-f0799b75c6eb")
+	)
+	(wire
+		(pts
+			(xy 144.78 88.9) (xy 144.78 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c790b06d-168f-4560-8390-e4e64465d7df")
+	)
+	(wire
+		(pts
+			(xy 201.93 109.22) (xy 274.32 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9299635-8e71-40e8-a9c9-e2a72185a0c1")
+	)
+	(wire
+		(pts
+			(xy 124.46 78.74) (xy 124.46 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cab9a3a6-a48b-4a13-a1b9-0e6de016eccc")
+	)
+	(wire
+		(pts
+			(xy 248.92 129.54) (xy 248.92 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0ae7f31-188f-46a1-adb0-1275c6dc6bf7")
+	)
+	(wire
+		(pts
+			(xy 62.23 22.86) (xy 62.23 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbfe951a-b12f-4b8b-9c52-2934dcf99d98")
+	)
+	(wire
+		(pts
+			(xy 93.98 63.5) (xy 93.98 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec62ddd1-3e03-4abc-a708-53e7e4053957")
+	)
+	(wire
+		(pts
+			(xy 222.25 114.3) (xy 222.25 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2efd53c-d7f5-4d32-995b-1de4075c1c77")
+	)
+	(wire
+		(pts
+			(xy 24.13 121.92) (xy 191.77 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f49d6164-87a4-437c-8754-49e3a00ad97f")
+	)
+	(wire
+		(pts
+			(xy 83.82 22.86) (xy 83.82 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f763c480-cd47-4c35-a0f2-e8eb0b817ddb")
+	)
+	(wire
+		(pts
+			(xy 274.32 97.79) (xy 177.8 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7fea3c5-b4a6-4d38-93f7-8817b68397fe")
+	)
+	(wire
+		(pts
+			(xy 24.13 35.56) (xy 55.88 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc0b7220-be4e-44d2-9ebb-6771a6696476")
+	)
+	(wire
+		(pts
+			(xy 191.77 121.92) (xy 191.77 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc7a48d4-b016-415d-ad88-fd9427c9e405")
+	)
+	(wire
+		(pts
+			(xy 154.94 95.25) (xy 154.94 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe536faa-87d0-4288-9cba-bce75e4a510a")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 35.56 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b6afee3-53af-430f-a8a3-cb35e250cad9")
+		(property "Reference" "H4"
+			(at 38.1 31.7499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 38.1 34.2899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 35.56 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 35.56 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 43.18 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "931ed0e3-b5f1-499f-9245-37bced15eded")
+		(property "Reference" "H1"
+			(at 45.72 144.7799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 45.72 147.3199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 43.18 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 43.18 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 252.73 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ced82a9f-e2c0-477e-b8b6-23f78ccad337")
+		(property "Reference" "H3"
+			(at 255.27 35.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 255.27 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 252.73 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 252.73 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 250.19 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea5ce6e2-a2ca-4cbd-8cd4-f76b619a8424")
+		(property "Reference" "H2"
+			(at 252.73 144.7799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 252.73 147.3199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 250.19 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 250.19 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 22.86)
+		(size 250.19 137.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "066d763a-2502-478a-b0ef-5b10332cf5c5")
+		(property "Sheetname" "Power"
+			(at 24.13 22.1484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 24.13 160.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 22.86)
+		(size 250.19 137.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "1124e657-7eba-4937-8a90-e643a5ce590d")
+		(property "Sheetname" "MCU_UI"
+			(at 24.13 22.1484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_ui.kicad_sch"
+			(at 24.13 160.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DAC_D4" output
+			(at 93.98 22.86 90)
+			(uuid "5528ea94-52cc-4dd0-87c6-8eb4619eec46")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D2" output
+			(at 73.66 22.86 90)
+			(uuid "46500665-8732-46f5-bd10-461e85597e84")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D1" output
+			(at 62.23 22.86 90)
+			(uuid "58e36055-ecb5-4acf-b3d4-a6645421053e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D3" output
+			(at 83.82 22.86 90)
+			(uuid "671ce392-434b-4310-8208-55c3a8127b18")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D5" output
+			(at 104.14 22.86 90)
+			(uuid "ce94a4c2-bbdc-4ea8-92d6-3c4867b6e7bb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D10" output
+			(at 154.94 22.86 90)
+			(uuid "6dda42b4-06ca-476c-906d-28409f140554")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D9" output
+			(at 144.78 22.86 90)
+			(uuid "df7ac244-5a0e-44d4-a623-9b1d31042411")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_CS" output
+			(at 191.77 22.86 90)
+			(uuid "c0a0b9f1-c1c7-4654-8ce1-69f162c2b7b7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D11" output
+			(at 165.1 22.86 90)
+			(uuid "61584bec-c46e-40c0-8b5b-32b36e927337")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SW_SEL" output
+			(at 177.8 22.86 90)
+			(uuid "cc043de6-e661-497a-9ddc-ef19d0c79619")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OFFSET_PWM" output
+			(at 201.93 22.86 90)
+			(uuid "2d1b1ac4-a660-442a-b769-0acd402703d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D8" output
+			(at 134.62 22.86 90)
+			(uuid "872e8d9c-360c-4e9a-8f72-4c60e0adf979")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D7" output
+			(at 124.46 22.86 90)
+			(uuid "acb3b015-5b4b-4956-a66f-232687912397")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D6" output
+			(at 114.3 22.86 90)
+			(uuid "870af229-b9c4-42c5-9a48-e0e19db1ce5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_D0" output
+			(at 55.88 22.86 90)
+			(uuid "db4fa160-8712-46b0-9b4a-3ec8d671971c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 22.86)
+		(size 250.19 137.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6e66f1eb-bc1c-4a9b-a54f-242509b34001")
+		(property "Sheetname" "DAC"
+			(at 24.13 22.1484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dac.kicad_sch"
+			(at 24.13 160.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DAC_D0" input
+			(at 24.13 35.56 180)
+			(uuid "9819fc00-4d6e-4906-878f-1669a8fa5cbb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_OUT" output
+			(at 24.13 129.54 180)
+			(uuid "4e720a50-ea2c-4c25-9464-6f5099b7c5e1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VREF_N" input
+			(at 24.13 114.3 180)
+			(uuid "4bf3cb20-1989-45e8-b8db-5f7ec12f4729")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D4" input
+			(at 24.13 63.5 180)
+			(uuid "f7290ac0-732d-48b7-ad39-1b9b8005aa33")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D5" input
+			(at 24.13 68.58 180)
+			(uuid "7c684078-83a2-4f01-aa96-3014626bae5e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D2" input
+			(at 24.13 50.8 180)
+			(uuid "e50d6635-b9f8-4f37-86f6-cf236abe015b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D1" input
+			(at 24.13 44.45 180)
+			(uuid "cf0eed20-35b9-412e-b738-6361e5f50ac0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D3" input
+			(at 24.13 57.15 180)
+			(uuid "cc8b5b81-4934-40c2-bd90-5ae4ca671957")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D11" input
+			(at 24.13 101.6 180)
+			(uuid "be3b11f7-4647-42d4-b47b-cafd7d465908")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D6" input
+			(at 24.13 73.66 180)
+			(uuid "51703e15-604f-41e4-9b41-cf7b39e5a9b9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D8" input
+			(at 24.13 83.82 180)
+			(uuid "7bde3d77-1e75-4687-b0b8-7e0757c6d11b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_CS" input
+			(at 24.13 121.92 180)
+			(uuid "7f0d8719-b1e7-4b12-866e-951cba039da5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D10" input
+			(at 24.13 95.25 180)
+			(uuid "93b4c671-8c08-4f82-9660-db3578566203")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D7" input
+			(at 24.13 78.74 180)
+			(uuid "c77d4559-f7ab-4964-9494-e49d3ea2d0de")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DAC_D9" input
+			(at 24.13 88.9 180)
+			(uuid "69254e11-9921-46e0-afa2-1355b52be553")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 24.13 22.86)
+		(size 250.19 137.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "bdac8fcd-9257-41f4-be88-97cc744758e2")
+		(property "Sheetname" "Analog_Out"
+			(at 24.13 22.1484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "analog_out.kicad_sch"
+			(at 24.13 160.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VREF_N" input
+			(at 274.32 125.73 0)
+			(uuid "168c8579-a1fd-4cf5-866c-9d14ed800552")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DAC_OUT" input
+			(at 274.32 116.84 0)
+			(uuid "dd7d441c-269d-43b2-99ac-2b772805fc23")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OFFSET_PWM" input
+			(at 274.32 109.22 0)
+			(uuid "2dbda7c8-3ead-4bed-8224-42431d62a8f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SW_SEL" input
+			(at 274.32 97.79 0)
+			(uuid "45948eac-69fe-45a8-aaf1-ce36e27d656e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "Function Generator - BEE425"
+				(path "/8aa17dac-ce51-4ef4-b862-1ca351b4cd89"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
