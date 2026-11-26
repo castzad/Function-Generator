@@ -106,6 +106,3 @@ OUT_DRV = −4.309 × SUM_SIG − 3.233 × OFF_BUF + 10.772 V.
 ## Limitations
 
 - The op-amps, DAC, switch, reference, regulator and LT1054 are **behavioural models** built from datasheet headline numbers, not vendor models. They're good for DC levels, gain, filter response and waveform shape. They don't model op-amp current limit, DAC glitches, switch charge injection, or the LT1054's 25 kHz ripple.
-- Assumptions to check against the datasheets: LT1054 output resistance (10 Ω), R-78E efficiency (85 %), DAC7821 output capacitance (30 pF), op-amp output swing (1 V from each rail).
-- For more realism, swap in vendor models: ADI's AD8066, TI's OPA1612, and LTspice's own LT1054 if your library has it. Use the pin order In+, In−, V+, V−, OUT for the op-amps.
-- The files were checked with ngspice, not inside LTspice itself. If LTspice reports an error on first open, note the exact message.
